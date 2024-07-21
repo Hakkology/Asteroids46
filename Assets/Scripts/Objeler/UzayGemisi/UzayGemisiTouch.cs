@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UzayGemisiTouch 
 {
     public UzayGemisi uzayGemisi;
+    public Button atesButonu;
 
-    public UzayGemisiTouch(UzayGemisi uzayGemisi)
+    public UzayGemisiTouch(UzayGemisi uzayGemisi, Button atesButonu)
     {
         this.uzayGemisi = uzayGemisi;
+        this.atesButonu = atesButonu;
+        atesButonu.onClick.AddListener(AtesTusunaBasýlýnca);
     }
 
     public void HandleControls()
@@ -38,6 +42,8 @@ public class UzayGemisiTouch
             }
         }
     }
+
+    public void AtesTusunaBasýlýnca() => uzayGemisi.KursunAtesEt();
 
 
 }

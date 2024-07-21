@@ -33,7 +33,7 @@ public class OyunSınırları : MonoBehaviour
         //boundary.transform.parent = transform;
         BoxCollider2D collider = boundary.AddComponent<BoxCollider2D>();
         collider.size = new Vector2(endX - startX + colliderOffset, colliderGenislik);
-        //collider.isTrigger = true;
+        collider.isTrigger = true;
     }
     void DikeyColliderCiz(float startY, float endY, float positionX)
     {
@@ -42,6 +42,6 @@ public class OyunSınırları : MonoBehaviour
         //boundary.transform.parent = transform;
         BoxCollider2D collider = boundary.AddComponent<BoxCollider2D>();
         collider.size = new Vector2(colliderGenislik, endY - startY + colliderOffset);
-        //collider.isTrigger = true;
+        collider.isTrigger = true;
     }
 }

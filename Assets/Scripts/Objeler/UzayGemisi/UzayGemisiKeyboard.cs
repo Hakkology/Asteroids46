@@ -24,6 +24,11 @@ public class UzayGemisiKeyboard
 		{
 			uzayGemisi.turning = -1;
 		}
+
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			uzayGemisi.KursunAtesEt();
+		}
 		
 	}
 
